@@ -21,7 +21,7 @@ def page_count(total: int, per_page: int) -> int:
     if total < 0:
         raise ValueError(f"total must be non-negative, got {total!r}")
     _validate(1, per_page)
-    return total // per_page
+    return (total + per_page - 1) // per_page
 
 
 def paginate(items: Sequence[T], page: int, per_page: int) -> list[T]:
