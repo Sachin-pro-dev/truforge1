@@ -1,0 +1,11 @@
+[project]
+name = "pagekit"
+version = "0.3.1"
+description = "Tiny helpers for paginating lists in API responses."
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "hypothesis>=6"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
